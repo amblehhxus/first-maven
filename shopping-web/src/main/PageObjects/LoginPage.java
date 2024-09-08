@@ -5,12 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
+public class LoginPage extends AbstractComponents {
 
     WebDriver driver;
 
     public LoginPage(WebDriver driver) {
-        
+        super(driver);
         this.driver = driver;
 
         //Initiate FindBy
@@ -26,12 +26,20 @@ public class LoginPage {
     @FindBy(id="login")
     WebElement btnLogin;
 
+    @FindBy(css="[class*='flyInOut']")
+    WebElement errorMessageContainer;
+
     public ProductPage login(String email, String password) {
         fieldEmail.sendKeys(email);
         fieldPassword.sendKeys(password);
         btnLogin.click();
         
         return new ProductPage(driver);
+    }
+
+    public String getErrorMessage() {
+        waitForWebElementVisible(errorMessageContainer);
+        return errorMessageContainer.getText();
     }
 
     public void goTo() {

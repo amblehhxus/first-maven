@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 
 import PageObjects.CartPage;
 import PageObjects.CheckoutPage;
-import PageObjects.LoginPage;
 import PageObjects.ProductPage;
 import PageObjects.SuccessPage;
 import Test.BaseTest;
@@ -21,9 +20,6 @@ public class App extends BaseTest
         String password = "Tester123#";
         String productNameTxt = "IPHONE 13 PRO";
         String countryNameTxt = "Indonesia";
-
-        // Create objects
-        LoginPage loginPage = startApplication();
 
         // Login
         ProductPage productPage = loginPage.login(email, password);

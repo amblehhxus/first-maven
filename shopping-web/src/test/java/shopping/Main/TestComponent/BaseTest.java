@@ -1,4 +1,4 @@
-package Test;
+package shopping.Main.TestComponent;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -8,12 +8,15 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 import PageObjects.LoginPage;
 
 public class BaseTest {
 
     public static WebDriver driver;
+    public LoginPage loginPage;
 
     public WebDriver initializeDriver() throws IOException{
 
@@ -34,10 +37,16 @@ public class BaseTest {
         return driver;
     }
 
+    @BeforeMethod
     public LoginPage startApplication() throws IOException {
         driver = initializeDriver();
-        LoginPage loginPage = new LoginPage(driver);
+        loginPage = new LoginPage(driver);
         loginPage.goTo();
         return loginPage;
+    }
+
+    @AfterMethod
+    public void tearDown() {
+        driver.close();
     }
 }
