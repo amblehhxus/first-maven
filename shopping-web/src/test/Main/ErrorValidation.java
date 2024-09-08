@@ -1,11 +1,11 @@
-package shopping.Main;
+package Main;
 
 import java.io.IOException;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import Test.BaseTest;
+import TestComponent.BaseTest;
 
 public class ErrorValidation extends BaseTest
 {   

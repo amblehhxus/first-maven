@@ -1,4 +1,4 @@
-package shopping.Main.TestComponent;
+package TestComponent;
 
 import java.io.FileInputStream;
 import java.io.IOException;

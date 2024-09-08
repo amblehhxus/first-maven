@@ -1,4 +1,4 @@
-package shopping.Main;
+package Main;
 
 import java.io.IOException;
 
@@ -9,7 +9,7 @@ import PageObjects.CartPage;
 import PageObjects.CheckoutPage;
 import PageObjects.ProductPage;
 import PageObjects.SuccessPage;
-import Test.BaseTest;
+import TestComponent.BaseTest;
 
 public class App extends BaseTest
 {   
