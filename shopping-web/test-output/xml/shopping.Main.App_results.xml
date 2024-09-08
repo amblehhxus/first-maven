@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestNGTest-7f3c286e-3d9c-4f6b-9223-d28f0fd59323"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="37.958">
+    <properties></properties>
+
+
+
+            <testcase
+                name="submitOrder"
+                time="37.958"
+                classname="shopping.Main.App">
+            </testcase>
+</testsuite>
