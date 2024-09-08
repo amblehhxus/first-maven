@@ -7,12 +7,17 @@ import org.testng.annotations.Test;
 
 import PageObjects.CartPage;
 import PageObjects.CheckoutPage;
+import PageObjects.OrderPage;
 import PageObjects.ProductPage;
 import PageObjects.SuccessPage;
 import TestComponent.BaseTest;
 
-public class App extends BaseTest
+public class SubmitOrderTest extends BaseTest
 {   
+    String email = "shoptest@test.com";
+    String password = "Tester123#";
+    String productNameTxt = "IPHONE 13 PRO";
+
     @Test
     public void submitOrder() throws InterruptedException, IOException
     {
@@ -42,4 +47,10 @@ public class App extends BaseTest
         Assert.assertTrue(success);
     }
 
+    @Test(dependsOnMethods = {"submitOrder"})
+    public void orderHistory() {
+        ProductPage productPage = loginPage.login(email, password);
+        OrderPage orderPage = productPage.goToOrderPage();
+        Assert.assertTrue(orderPage.verifyProductName(productNameTxt));
+    }
 }

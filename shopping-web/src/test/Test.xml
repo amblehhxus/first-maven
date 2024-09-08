@@ -5,7 +5,7 @@
     <test name="Test">
         <classes>
             <class name="TestComponent.BaseTest"/>
-            <class name="Main.ErrorValidation"/>
+            <class name="Main.SubmitOrderTest"/>
         </classes>
     </test>
 </suite>

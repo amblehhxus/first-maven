@@ -55,9 +55,4 @@ public class ProductPage extends AbstractComponents {
         waitForElementVisible(toastMessageBy);
         waitForInvisibility(spinner);
     }
-
-    public CartPage goToCartPage() {
-        cartPageBtn.click();
-        return new CartPage(driver);
-    }
 }
