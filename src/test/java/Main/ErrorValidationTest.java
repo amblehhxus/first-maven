@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import TestComponent.BaseTest;
 
-public class ErrorValidation extends BaseTest
+public class ErrorValidationTest extends BaseTest
 {   
     @Test
     public void errorValidation() throws InterruptedException, IOException

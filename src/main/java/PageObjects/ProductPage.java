@@ -49,10 +49,11 @@ public class ProductPage extends AbstractComponents {
         return productNameObj;
     }
 
-    public void addToCart(String productNameExpected) {
+    public void addToCart(String productNameExpected) throws InterruptedException {
         WebElement productNameObj = getProductByName(productNameExpected);
         productNameObj.findElement(addToCartBtnBy).click();
         waitForElementVisible(toastMessageBy);
         waitForInvisibility(spinner);
+        Thread.sleep(3000);
     }
 }

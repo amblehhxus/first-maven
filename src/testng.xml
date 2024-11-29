@@ -2,10 +2,15 @@
 
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-    <test name="Test">
+    <!-- <test name="Submit Order Test">
         <classes>
-            <class name="TestComponent.BaseTest"/>
             <class name="Main.SubmitOrderTest"/>
         </classes>
-    </test>
+    </test> -->
+
+    <test name="Error Validation Test">
+        <classes>
+            <class name="Main.ErrorValidationTest"/>
+        </classes>
+    </test>    
 </suite>

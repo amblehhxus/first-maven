@@ -22,7 +22,7 @@ public class BaseTest {
 
         //properties
         Properties prop = new Properties();
-        FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "\\src\\main\\Resources\\GlobalData.properties");
+        FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "\\src\\main\\java\\Resources\\GlobalData.properties");
         prop.load(fis);
         String browserName = prop.getProperty("browser");
 

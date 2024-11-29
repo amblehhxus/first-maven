@@ -30,7 +30,7 @@
     <dependency>
         <groupId>org.seleniumhq.selenium</groupId>
         <artifactId>selenium-java</artifactId>
-        <version>4.23.1</version>
+        <version>4.27.0</version>
     </dependency>
 
     <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
@@ -59,6 +59,8 @@
   </dependencies>
 
   <build>
+    <sourceDirectory>src/main/java</sourceDirectory> <!-- Main source code directory -->
+    <testSourceDirectory>src/test/java</testSourceDirectory>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
@@ -85,8 +87,11 @@
           <version>2.22.1</version>
           <configuration>
             <suiteXmlFiles>
-            <suiteXmlFile>src/test/Test.xml</suiteXmlFile>
+              <suiteXmlFile>src/testng.xml</suiteXmlFile>
             </suiteXmlFiles>
+            <includes>
+              <include>**/*.java</include>
+            </includes>
           </configuration>
         </plugin>
         <plugin>
