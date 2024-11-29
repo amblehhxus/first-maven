@@ -10,3 +10,4 @@ With this project, I've managed to learn:
 - Create GlobalData.properties for browser management
 - Create testng test-cases
 - Configure testng xml files
+- Use HashMap for test variables
